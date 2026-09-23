@@ -1,0 +1,78 @@
+# ---------------------------------------------
+# Private keys / SSH keys
+# ---------------------------------------------
+*.pem
+*.key
+*.pfx
+*.p12
+id_rsa
+id_ed25519
+id_ecdsa
+id_dsa
+# Public keys aren't secret, but keep them out of the repo alongside their private pairs
+*.pub
+
+# ---------------------------------------------
+# Terraform
+# ---------------------------------------------
+# Local provider/module cache (large binaries, machine-specific)
+**/.terraform/*
+
+# State files contain resource IDs, IPs and often plaintext secrets
+*.tfstate
+*.tfstate.*
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Variable files usually hold environment-specific / sensitive values
+*.tfvars
+*.tfvars.json
+
+# Local overrides
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Saved plans may contain sensitive values
+*.tfplan
+tfplan
+
+# CLI config
+.terraformrc
+terraform.rc
+
+# NOTE: .terraform.lock.hcl is intentionally NOT ignored - it should be committed.
+
+# ---------------------------------------------
+# Environment / credentials
+# ---------------------------------------------
+.env
+.env.*
+!.env.example
+!.env.example.*
+*.secret
+secrets/
+credentials.json
+kubeconfig
+*.kubeconfig
+
+# ---------------------------------------------
+# Python
+# ---------------------------------------------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# ---------------------------------------------
+# OS / Editor
+# ---------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
